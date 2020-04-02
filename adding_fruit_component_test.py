@@ -6,6 +6,23 @@ amy_fruit_bowl = [
         ["Peasches", 3]
         ]
 
+def get_integer(m, min,max):
+    """ message, minimum and maximum returns acceptable integer """
+    cont = "y"
+    while cont is "y":
+        try:
+            my_integer = int(input(m))
+        except ValueError:
+            print("please enter an integer value")
+            continue
+        if my_integer < min:
+            print("The value you have entered is too low")
+            continue
+        elif my_integer > max:
+            print("The value you have entered is too high")
+            continue
+        return my_integer
+
 def add_fruit(L):
     """print list with item numbers
       get user quantity and add to list
@@ -19,7 +36,7 @@ def add_fruit(L):
         print(row)
     message = "Please choose an item number to add fruit to?   "
     # must have full integer validation
-    user_choice = int(input(message))
+    user_choice = get_integer(message, 0, len(L)-1)
     message = "How many {} would you like to add?   ".format(L[user_choice][0])
     user_number = int(input(message))
     L[user_choice][1] += user_number
@@ -27,4 +44,10 @@ def add_fruit(L):
     print(confirmation_message)
 
 
+def print_fruit(L):
+    for i in range(0,len(L)):
+        row = "{:^12}{:30}{:2}".format(i, L[i][0], L[i][1])
+        print(row)
+
 add_fruit(amy_fruit_bowl)
+print_fruit(amy_fruit_bowl)
