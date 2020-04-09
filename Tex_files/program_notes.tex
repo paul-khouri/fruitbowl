@@ -1,0 +1,85 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage[top=2cm,bottom=2cm,right=2cm,left=2cm]{geometry}
+\usepackage{amsmath,amssymb,enumitem,multicol,graphicx,tikz,framed,tcolorbox,mathtools,comment,subcaption,array,pgfplots}
+\usepackage{listings}
+\usepackage{xcolor}
+\linespread{1.3}
+%New colors defined below
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+%Code listing style named "mystyle"
+\lstdefinestyle{mystyle}{
+  backgroundcolor=\color{backcolour},   commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,         
+  breaklines=true,                 
+  captionpos=b,                    
+  keepspaces=true,                 
+  numbers=left,                    
+  numbersep=5pt,                  
+  showspaces=false,                
+  showstringspaces=false,
+  showtabs=false,                  
+  tabsize=2
+}
+
+%"mystyle" code listing set
+\lstset{style=mystyle}
+
+
+\usepackage{lipsum,hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=cyan,
+}
+
+\begin{document}
+\section{Review}
+Lists and Functions
+\section{Functions}
+A function is a block of code that can be called at any time in a program.
+\begin{itemize}
+\item Functions allow programmers to avoid creating code that has lots of repetitions.
+\item Functions allow programmers to break the structure of a program into blocks (or modules), which means that different problems can be separated out and dealt with independently.
+\end{itemize}
+\section{Lists}
+Lists are a collection of data items\\
+\hyperlink{Lists}{This links to a number of code examples}
+\subsection{What we should be able to do with lists:}
+\begin{itemize}
+	\item Create one and access items in the list using index notation.
+	\item Find how many items are in the list
+	\item Loop through the list and print out items ( have more than one way of doing)
+	\item Understand that there are basic \textbf{methods} associated with a list. These mean that we can add, remove, update elements in a list.
+\end{itemize}
+\subsection{Activities}
+\begin{itemize}
+	\item Create a function that takes a list as an argument, prints out the list (horizontally), and returns the length of the list
+	\item Create a program that asks for the user to enter 5 numbers, it then prints out the sum, average  and product of the numbers (each part is a function).
+	\item Create a program that asks for the user to enter 5 numbers, it then prints a menu asking giving users and option to get the sum, product, average of the numbers
+\end{itemize}
+\section{Validating User Input}
+\begin{itemize}
+\item Create a function to get input of a single letter from a user.
+\item  Create a function to get an integer from a user
+\item Create a function to get a string between 2 and 5 letters
+\item Create a function to get an integer from a user with boundaries that might change
+\end{itemize}
+\newpage
+	\hypertarget{Lists}{}
+\lstinputlisting[language=Python, caption = Lists]{lists.py}
+\lstinputlisting[caption = Lists]{lists.txt}
+\lstinputlisting[language=Python, caption = Lists]{lists_functions.py}
+\lstinputlisting[language=Python, caption = Menu and Functions]{menu_list_sums_product_average.py}
+
+\end{document}

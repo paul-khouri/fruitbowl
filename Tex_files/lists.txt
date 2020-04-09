@@ -1,0 +1,14 @@
+/usr/local/bin/python3.7 /Users/Paul/Documents/Python_projects/FruitBowlGitHub/lists.py
+AliceBelindaChansingDebbieEloiseFloss
+0
+1
+2
+3
+4
+5
+['Belinda', 'Chansing', 'Debbie', 'Eloise', 'Floss']
+['Belinda', 'Chansing', 'Debbie', 'Eloise', 'Floss', 'Alice']
+['Alice', 'Belinda', 'Chansing', 'Debbie', 'Eloise', 'Floss']
+['Alice', 'Belinda', 'Chansing', 'Eloise', 'Floss']
+Alice
+['Belinda', 'Chansing', 'Eloise', 'Floss']

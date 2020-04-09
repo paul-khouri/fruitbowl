@@ -1,0 +1,11 @@
+/usr/local/bin/python3.7 /Users/Paul/Documents/Python_projects/FruitBowlGitHub/fruit_sprint_1.py
+R : Review Contents
+Q : Quit
+Please choose your options: ->   R
+Apples          -          5
+Pears           -          7
+Mangoes         -          2
+Kiwi Fruit      -          9
+Peaches         -          3
+
+Process finished with exit code 0

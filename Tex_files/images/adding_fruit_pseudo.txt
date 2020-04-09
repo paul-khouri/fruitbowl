@@ -1,0 +1,10 @@
+create list fruit_bowl= [ ["apples, 2], ["oranges , 3 ],... ]
+
+define function add_fruit(L) takes m x [string,integer] list
+print out list with item numbers (beautifully formatted :) )
+input: item to edit?
+input: how many apples would you like to add
+add apples to the value
+return None
+
+Print out confirmation list
