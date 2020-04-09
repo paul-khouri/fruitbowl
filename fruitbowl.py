@@ -93,8 +93,8 @@ def add_fruit(F):
         my_string = "{:<5}{:10}".format(i, F[i][0])
         print(my_string)
     print("-" * 60)
-    option = get_integer("Choose option number of fruit to add: --> ", 0, len(F))
-    my_amount = get_integer("How many {} would you like to add? --> ".format(F[option][0]), 0, 10)
+    option = get_integer("Choose option number of fruit to add: -->  ", 0, len(F))
+    my_amount = get_integer("How many {} would you like to add? -->  ".format(F[option][0]), 0, 10)
     F[option][1]=F[option][1]+my_amount
     response_string = "You now have {} {} in the fruitbowl".format(F[option][1], F[option][0])
     print(response_string)
