@@ -1,1 +1,2 @@
 Simple exploration file for testing
+Update of the file
