@@ -55,25 +55,64 @@ Looking at the Merit criteria for this standard:
 	functionality of the digital technologies outcome
 	\item addressing relevant implications.
 \end{itemize}
-The project management technique we will use will be the Agile technique.
-Our version control is Git hub (watch videos and make the repository in the video)
+The project management technique we will use will be the Agile technique.\\
+Our version control is Git hub (watch videos and make the repository in the video)\\
+Relevant implications will be similar to last year\\
 
+\section{Agile}
+Much of this material has come from Atlassian \url{https://www.atlassian.com/agile}\\\\
+Agile is fundamentally team based, but you can apply its thinking and methods to your individual projects.\\\\
+Agile originally came from a ``manifesto'' of software developers in 2001. \\
+At that stage software development involved:
+\begin{itemize}
+	\item complete planning of the project before starting to make anything, 
+	\item long deadlines (six months or more), 
+	\item generally only seeing the clien at the beginning and at the end of a project,
+	\item  members of the team had highly specified rolls (`` I only do databases'').
+\end{itemize}
+The problem with this (Waterfall) approach is that building digital products is still a new area
+\begin{itemize}
+	\item  So that new needs or technical approaches can emerge at any time and people often learn as they go.
+	\item By the time the client gets the product, it is out of date and is inflexible to new requirements or changes.
+	\item The product is not being tested in the marketpalce until it is finished
+	\item During the project, some team members will have lots to do whilst others are doing little because the needs are outside of their job description
+\end{itemize}
+Some of the fundemental ideas behind agile are
+\begin{itemize}
+	\item A team is a \textbf{TEAM}. So members should be aware of what others are doing, may fast track actions so that another part of the team is not \textbf{blocked} and may take on different non-specialist rolls at different times.
+	\item The emphasis is on working software (applications) that can be launched quickly and developed upon responsively to the market place and clients needs (have you ever had to download an update??)
+	\item Being responsive to change (have a plan but change the plan if it is the right thing to do)
+\end{itemize}
+This is the general idea of Agile and its actual implementation is done using methodologies such as \textbf{Scrum} and \textbf{Kanban}.\\
+We will use Scrum.
+\subsection{Scrum}
+All agile methods follow similar patterns.
+\begin{itemize}
+	\item Break the project down into small parts (project backlog)
+	\item Prioritize
+	\item Plan and implement a short passage of work that will have a tangible outcome (sprint)
+	\item Have regular, quick meetings or reviews ``standups'' to identify 
+	\begin{itemize}
+		\item What have I done (yesterday)?
+		\item What do I intend to do next (today)?
+		\item What is blocking me?
+	\end{itemize}
+	\item Review completed passage of work (sprint review)
+	\item Repeat the cycle (iterate)
+\end{itemize}
 
+\newpage
+\section{Let's consider a brief}
 	
-	
-	
-	Let's consider a brief:
-	
-	Amy has an  large bowl of fruit at home.\\
-	It currently contains 5 Apples , 7 Pears , 2 Mangoes, 9 KiwiFruit and 3 Peaches.\\
-	Amy would like a program designed so that she monitor the consumption of her fruit.\\\\
-	
-	We are assuming that we will make this in Python and that it will be a console program.\\
-	However, we can think a little more widely before we start.\\
-	Using a brainstorming process we can think about all the things we would like the program to do.\\
-	We then break these ideas up into pieces and place them in a \textbf{Project Backlog}
-	\newpage
-	\section{Project Backlog}
+Amy has an  large bowl of fruit at home.\\
+It currently contains 5 Apples , 7 Pears , 2 Mangoes, 9 KiwiFruit and 3 Peaches.\\
+Amy would like a program designed so that she monitor the consumption of her fruit.\\\\
+
+We are assuming that we will make this in Python and that it will be a console program.\\
+However, we can think a little more widely before we start.\\
+Using a brainstorming process we can think about all the things we would like the program to do.\\
+We then break these ideas up into pieces and place them in a \textbf{Project Backlog}
+	\subsection{Project Backlog}
 	\begin{itemize}
 		\item The project backlog is a list of all the things the program might do.
 		\item It can (theoretically) be infinite in size
@@ -92,7 +131,7 @@ The project backlog gets set up as a trello/kanban whetever type board.
 	\includegraphics[width=11cm]{Project_backlog.png}
 \end{figure}
 	
-\section{The Sprint}
+\subsection{The Sprint}
 \begin{itemize}
 	\item A sprint is a planned passage of work that is completed in a short timeframe and leads to a tangible outcome.
 	\item It ``adds value'' to the project.
@@ -102,8 +141,8 @@ The project backlog gets set up as a trello/kanban whetever type board.
 \subsection{Sprint 1}
 Taking the aim ``to list the contents of the fruit bowl'' , we plan the sprint , then do it.\\
 Every sprint should follow the requirments below\\
-Not every sprint needs to be documented in meticulous detail, but \textbf{key} sprints should be.\\
-You want to 
+Not every sprint needs to be documented in meticulous detail, but \textbf{key} sprints should be.\\\\
+You want to include:
 \begin{itemize}
 	\item Aim
 	\item Trello or Kanban Board
@@ -118,17 +157,18 @@ You want to
 \end{figure}
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=12cm]{images/Sprint_1_plan.jpg}
+	\includegraphics[width=14cm]{images/Sprint_1_plan.jpg}
 \end{figure}
 \newpage
 \lstinputlisting[caption = Successful Test]{images/sprint_1_test.txt}
-\subsection{After the sprint}
+\subsection{After the sprint (sprint review)}
 \begin{itemize}
 	\item The project backlog should be reviewed and updated.
+	\item The top of the backlog is taken for the next sprint.
 	\item Files are uploaded to github and commits periodically documented
 \end{itemize}
-\newpage
-\subsection{Running the project overall}
+
+\section{Running the project overall}
 We follow a cycle of sprint after sprint, building up the sophistication of the program.\\
 In the case of our fruit bowl the sprints would be somthings like:
 \begin{itemize}
@@ -143,7 +183,7 @@ In the case of our fruit bowl the sprints would be somthings like:
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=14cm]{images/GeneralPlanning-Fruit_Structure.png}
+	\includegraphics[width=12cm]{images/GeneralPlanning-Fruit_Structure.png}
 \end{figure}
 Each sprint could, in theory, been seen as the process of creating one of these functions.\\
 Validation functions would also have to be built.
