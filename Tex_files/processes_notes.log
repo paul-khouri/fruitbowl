@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.6)  10 APR 2020 11:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.6)  10 APR 2020 13:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1275,17 +1275,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 227--228
 
 [8 <./images/adding_fruit_test_1.png> <./images/adding_fruit_test_2.png> <./ima
 ges/adding_fruit_test_3.png>] [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 250.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 250.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 252.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 252.
  (./processes_notes.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 250.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 250.
-Package rerunfilecheck Info: File `processes_notes.out' has not changed.
-(rerunfilecheck)             Checksum: 44B7E7EDA4B88991EF927D04DD49BB8F;761.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 252.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 252.
+
+
+Package rerunfilecheck Warning: File `processes_notes.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `processes_notes.out':
+(rerunfilecheck)             Before: 44B7E7EDA4B88991EF927D04DD49BB8F;761
+(rerunfilecheck)             After:  68D7CA33D7180605630FE45367D53E41;812.
  ) 
 Here is how much of TeX's memory you used:
- 41800 strings out of 492616
- 942039 string characters out of 6129481
+ 41801 strings out of 492616
+ 942048 string characters out of 6129481
  1201210 words of memory out of 5000000
  45145 multiletter control sequences out of 15000+600000
  538838 words of font info for 49 fonts, out of 8000000 for 9000
@@ -1297,10 +1304,10 @@ Here is how much of TeX's memory you used:
 r/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
 /local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/
 local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on processes_notes.pdf (9 pages, 3068085 bytes).
+Output written on processes_notes.pdf (9 pages, 3068601 bytes).
 PDF statistics:
- 211 PDF objects out of 1000 (max. 8388607)
- 170 compressed objects within 2 object streams
- 54 named destinations out of 1000 (max. 500000)
+ 213 PDF objects out of 1000 (max. 8388607)
+ 172 compressed objects within 2 object streams
+ 55 named destinations out of 1000 (max. 500000)
  154 words of extra memory for PDF output out of 10000 (max. 10000000)
 
