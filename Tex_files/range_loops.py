@@ -19,4 +19,4 @@ def fib_sequence():
         print(n/m)
 fib_sequence()
 
-#range_powers()
+range_powers()
