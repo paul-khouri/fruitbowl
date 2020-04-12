@@ -45,8 +45,8 @@ def sort_list(L):
 
 
 #print_list(names)
-#remove_item(names)
+remove_item(names)
 #print_with_indexes(names)
 #remove_at_index(names)
-add_to_list(names)
-sort_list(names)
+#add_to_list(names)
+#sort_list(names)

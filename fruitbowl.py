@@ -12,7 +12,7 @@ def get_integer(m, min,max):
         try:
             my_integer = int(input(m))
         except ValueError:
-            print("please enter an integer value")
+            print("plgit ease enter an integer value")
             continue
         if my_integer < min:
             print("The value you have entered is too low")
