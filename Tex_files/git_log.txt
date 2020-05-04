@@ -1,0 +1,401 @@
+Last login: Fri May  1 21:47:21 on ttys000
+Paul@supports-MBP-4 ~ % pwd
+/Users/Paul
+Paul@supports-MBP-4 ~ % cd
+Paul@supports-MBP-4 ~ % pwd
+/Users/Paul
+Paul@supports-MBP-4 ~ % ls
+Applications			Library
+Creative Cloud Files		Movies
+Desktop				Music
+Documents			Pictures
+Downloads			Public
+Google Drive File Stream	PycharmProjects
+Paul@supports-MBP-4 ~ % cd Documents
+Paul@supports-MBP-4 Documents % ls
+12Program_Plan				Year8Test
+91582- possible-assessments		airbnb
+AI					code_activities
+Adobe					databasematerial
+Algebra_TEX_2019			fruitbowl_from_github
+CodeTests				github _testing
+DB_Testing_C				iCloudSet_latest
+DTech					iCloud_big_old_set
+Iluustrator_summer			iCloud_intermediate_set
+JS_Programming_Done			illustrator_block.ai
+Machine_Learning			illustrator_block.gif
+Machine_Learning_Hidden			images
+Nature_Of_Code				nocharacter.txt
+Olympics				onecharacter.txt
+Pages from Workbook - Teacher Copy.pdf	quatrefoil.ai
+Python_projects				sample_sites
+Roll.xlsx				statistics_assessments
+Statistical_Reports_Tex			training
+TestClone				unit_conversions
+Untitled.txt				~$Roll.xlsx
+Year10
+Paul@supports-MBP-4 Documents % cd DTech
+Paul@supports-MBP-4 DTech % ls
+DBases			Year10
+Year 11			chinook_database
+Paul@supports-MBP-4 DTech % pwd
+Paul@supports-MBP-4 DTech % git clone https://github.com/paul-khouri/year11_2020.git
+Cloning into 'year11_2020'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+Paul@supports-MBP-4 DTech % pwd
+/Users/Paul/Documents/DTech
+Paul@supports-MBP-4 DTech % ls
+DBases			Year 11			Year10			chinook_database	year11_2020
+Paul@supports-MBP-4 DTech % cd year11_2020
+Paul@supports-MBP-4 year11_2020 % git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Paul@supports-MBP-4 year11_2020 % git remote
+origin
+Paul@supports-MBP-4 year11_2020 % ls
+Molley_read_and make_a_new_file.pdf	README.md				other_work
+Quiz_assessment				jade_v4.pdf
+Paul@supports-MBP-4 year11_2020 % git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	Molley_read_and make_a_new_file.pdf
+	jade_v4.pdf
+	other_work/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Paul@supports-MBP-4 year11_2020 % git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	Molley_read_and make_a_new_file.pdf
+	jade_v4.pdf
+	other_work/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Paul@supports-MBP-4 year11_2020 % git commit -a -m "Adding large File Block"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+	.DS_Store
+	Molley_read_and make_a_new_file.pdf
+	jade_v4.pdf
+	other_work/
+
+nothing added to commit but untracked files present
+Paul@supports-MBP-4 year11_2020 % git add -a
+error: unknown switch `a'
+usage: git add [<options>] [--] <pathspec>...
+
+    -n, --dry-run         dry run
+    -v, --verbose         be verbose
+
+    -i, --interactive     interactive picking
+    -p, --patch           select hunks interactively
+    -e, --edit            edit current diff and apply
+    -f, --force           allow adding otherwise ignored files
+    -u, --update          update tracked files
+    --renormalize         renormalize EOL of tracked files (implies -u)
+    -N, --intent-to-add   record only the fact that the path will be added later
+    -A, --all             add changes from all tracked and untracked files
+    --ignore-removal      ignore paths removed in the working tree (same as --no-all)
+    --refresh             don't add, only refresh the index
+    --ignore-errors       just skip files which cannot be added because of errors
+    --ignore-missing      check if - even missing - files are ignored in dry run
+    --chmod (+|-)x        override the executable bit of the listed files
+
+Paul@supports-MBP-4 year11_2020 % git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	Molley_read_and make_a_new_file.pdf
+	jade_v4.pdf
+	other_work/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Paul@supports-MBP-4 year11_2020 % git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+Paul@supports-MBP-4 year11_2020 % git add .
+Paul@supports-MBP-4 year11_2020 % git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .DS_Store
+	new file:   Molley_read_and make_a_new_file.pdf
+	new file:   jade_v4.pdf
+	new file:   other_work/.DS_Store
+	new file:   other_work/Tree_test.py
+	new file:   other_work/Tree_test_1.py
+	new file:   other_work/__pycache__/questions.cpython-37.pyc
+	new file:   other_work/binary_tree_1.py
+	new file:   other_work/class_adding_nums.py
+	new file:   other_work/class_functions_with_arguments.py
+	new file:   other_work/conditions_examples.py
+	new file:   other_work/dict_multi_adds.py
+	new file:   other_work/dictionaries_class.py
+	new file:   other_work/dictionaries_class_1.py
+	new file:   other_work/dictionary_tree.py
+	new file:   other_work/dictionary_tree_rpg.py
+	new file:   other_work/dictionary_tree_rpg_grace.py
+	new file:   other_work/dictionary_tree_rpg_grace_simple.py
+	new file:   other_work/dictionary_update_using_key.py
+	new file:   other_work/dinner_order_basic.py
+	new file:   other_work/dinner_order_basic_part.py
+	new file:   other_work/dinner_order_basic_v3.py
+	new file:   other_work/dinner_order_loop_version.py
+	new file:   other_work/first_file.py
+	new file:   other_work/full game v1.py
+	new file:   other_work/full game v1_update.py
+	new file:   other_work/full_game_v1_update.py
+	new file:   other_work/function_arguments.py
+	new file:   other_work/function_arguments_simple.py
+	new file:   other_work/functions_set_up_loop.py
+	new file:   other_work/getting_input.py
+	new file:   other_work/little_dictionary.py
+	new file:   other_work/loops_cond_class.py
+	new file:   other_work/loops_input_cond.py
+	new file:   other_work/loops_list.py
+	new file:   other_work/loops_with_lists.py
+	new file:   other_work/nodes/__pycache__/node_set.cpython-37.pyc
+	new file:   other_work/nodes/node_left_right.py
+	new file:   other_work/nodes/node_set.py
+	new file:   other_work/questions.py
+	new file:   other_work/random_examples.py
+	new file:   other_work/running_questions.py
+	new file:   other_work/running_questions_v2.py
+	new file:   other_work/running_questions_v3.py
+	new file:   other_work/shuffle.py
+	new file:   other_work/stringmethod.py
+	new file:   other_work/unicorn_with_validation.py
+	new file:   other_work/user_input_function.py
+	new file:   other_work/validation1.py
+	new file:   other_work/validation_game.py
+
+Paul@supports-MBP-4 year11_2020 % git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .DS_Store
+	new file:   Molley_read_and make_a_new_file.pdf
+	new file:   jade_v4.pdf
+	new file:   other_work/.DS_Store
+	new file:   other_work/Tree_test.py
+	new file:   other_work/Tree_test_1.py
+	new file:   other_work/__pycache__/questions.cpython-37.pyc
+	new file:   other_work/binary_tree_1.py
+	new file:   other_work/class_adding_nums.py
+	new file:   other_work/class_functions_with_arguments.py
+	new file:   other_work/conditions_examples.py
+	new file:   other_work/dict_multi_adds.py
+	new file:   other_work/dictionaries_class.py
+	new file:   other_work/dictionaries_class_1.py
+	new file:   other_work/dictionary_tree.py
+	new file:   other_work/dictionary_tree_rpg.py
+	new file:   other_work/dictionary_tree_rpg_grace.py
+	new file:   other_work/dictionary_tree_rpg_grace_simple.py
+	new file:   other_work/dictionary_update_using_key.py
+	new file:   other_work/dinner_order_basic.py
+	new file:   other_work/dinner_order_basic_part.py
+	new file:   other_work/dinner_order_basic_v3.py
+	new file:   other_work/dinner_order_loop_version.py
+	new file:   other_work/first_file.py
+	new file:   other_work/full game v1.py
+	new file:   other_work/full game v1_update.py
+	new file:   other_work/full_game_v1_update.py
+	new file:   other_work/function_arguments.py
+	new file:   other_work/function_arguments_simple.py
+	new file:   other_work/functions_set_up_loop.py
+	new file:   other_work/getting_input.py
+	new file:   other_work/little_dictionary.py
+	new file:   other_work/loops_cond_class.py
+	new file:   other_work/loops_input_cond.py
+	new file:   other_work/loops_list.py
+	new file:   other_work/loops_with_lists.py
+	new file:   other_work/nodes/__pycache__/node_set.cpython-37.pyc
+	new file:   other_work/nodes/node_left_right.py
+	new file:   other_work/nodes/node_set.py
+	new file:   other_work/questions.py
+	new file:   other_work/random_examples.py
+	new file:   other_work/running_questions.py
+	new file:   other_work/running_questions_v2.py
+	new file:   other_work/running_questions_v3.py
+	new file:   other_work/shuffle.py
+	new file:   other_work/stringmethod.py
+	new file:   other_work/unicorn_with_validation.py
+	new file:   other_work/user_input_function.py
+	new file:   other_work/validation1.py
+	new file:   other_work/validation_game.py
+
+Paul@supports-MBP-4 year11_2020 % git commit -a -m "Large file block to add"
+[master b3a0e9f] Large file block to add
+ 50 files changed, 3025 insertions(+)
+ create mode 100644 .DS_Store
+ create mode 100644 Molley_read_and make_a_new_file.pdf
+ create mode 100644 jade_v4.pdf
+ create mode 100644 other_work/.DS_Store
+ create mode 100644 other_work/Tree_test.py
+ create mode 100644 other_work/Tree_test_1.py
+ create mode 100644 other_work/__pycache__/questions.cpython-37.pyc
+ create mode 100644 other_work/binary_tree_1.py
+ create mode 100644 other_work/class_adding_nums.py
+ create mode 100644 other_work/class_functions_with_arguments.py
+ create mode 100644 other_work/conditions_examples.py
+ create mode 100644 other_work/dict_multi_adds.py
+ create mode 100644 other_work/dictionaries_class.py
+ create mode 100644 other_work/dictionaries_class_1.py
+ create mode 100644 other_work/dictionary_tree.py
+ create mode 100644 other_work/dictionary_tree_rpg.py
+ create mode 100644 other_work/dictionary_tree_rpg_grace.py
+ create mode 100644 other_work/dictionary_tree_rpg_grace_simple.py
+ create mode 100644 other_work/dictionary_update_using_key.py
+ create mode 100644 other_work/dinner_order_basic.py
+ create mode 100644 other_work/dinner_order_basic_part.py
+ create mode 100644 other_work/dinner_order_basic_v3.py
+ create mode 100644 other_work/dinner_order_loop_version.py
+ create mode 100644 other_work/first_file.py
+ create mode 100644 other_work/full game v1.py
+ create mode 100644 other_work/full game v1_update.py
+ create mode 100644 other_work/full_game_v1_update.py
+ create mode 100644 other_work/function_arguments.py
+ create mode 100644 other_work/function_arguments_simple.py
+ create mode 100644 other_work/functions_set_up_loop.py
+ create mode 100644 other_work/getting_input.py
+ create mode 100644 other_work/little_dictionary.py
+ create mode 100644 other_work/loops_cond_class.py
+ create mode 100644 other_work/loops_input_cond.py
+ create mode 100644 other_work/loops_list.py
+ create mode 100644 other_work/loops_with_lists.py
+ create mode 100644 other_work/nodes/__pycache__/node_set.cpython-37.pyc
+ create mode 100644 other_work/nodes/node_left_right.py
+ create mode 100644 other_work/nodes/node_set.py
+ create mode 100644 other_work/questions.py
+ create mode 100644 other_work/random_examples.py
+ create mode 100644 other_work/running_questions.py
+ create mode 100644 other_work/running_questions_v2.py
+ create mode 100644 other_work/running_questions_v3.py
+ create mode 100644 other_work/shuffle.py
+ create mode 100644 other_work/stringmethod.py
+ create mode 100644 other_work/unicorn_with_validation.py
+ create mode 100644 other_work/user_input_function.py
+ create mode 100644 other_work/validation1.py
+ create mode 100644 other_work/validation_game.py
+Paul@supports-MBP-4 year11_2020 % git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+Paul@supports-MBP-4 year11_2020 % git config --global
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --default <value>     with --get, use default value when missing entry
+
+Paul@supports-MBP-4 year11_2020 % git config --global user.name
+paul-khouri
+Paul@supports-MBP-4 year11_2020 % git config --global user.email
+paul.khouri@marsden.school.nz
+Paul@supports-MBP-4 year11_2020 % git config --list
+credential.helper=osxkeychain
+user.name=paul-khouri
+user.email=paul.khouri@marsden.school.nz
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+remote.origin.url=https://github.com/paul-khouri/year11_2020.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+Paul@supports-MBP-4 year11_2020 % git log
+commit b3a0e9fcaff32cbaf0f22e47449ec98e248a6d50 (HEAD -> master)
+Author: paul-khouri <paul.khouri@marsden.school.nz>
+Date:   Fri May 1 22:08:51 2020 +1200
+
+    Large file block to add
+
+commit 818bb95a452b93374d02630a4201c9e9c99f10dc (origin/master, origin/HEAD)
+Author: paul-khouri <45544400+paul-khouri@users.noreply.github.com>
+Date:   Fri May 1 21:55:59 2020 +1200
+
+    Initial commit
+Paul@supports-MBP-4 year11_2020 % git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+Paul@supports-MBP-4 year11_2020 % git push origin
+Enumerating objects: 57, done.
+Counting objects: 100% (57/57), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (56/56), done.
+Writing objects: 100% (56/56), 3.62 MiB | 590.00 KiB/s, done.
+Total 56 (delta 5), reused 0 (delta 0)
+remote: Resolving deltas: 100% (5/5), done.
+To https://github.com/paul-khouri/year11_2020.git
+   818bb95..b3a0e9f  master -> master
+Paul@supports-MBP-4 year11_2020 % git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Paul@supports-MBP-4 year11_2020 % 
