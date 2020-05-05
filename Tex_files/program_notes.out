@@ -3,7 +3,9 @@
 \BOOKMARK [1][-]{section.3}{String Formatting}{}% 3
 \BOOKMARK [1][-]{section.4}{Loops}{}% 4
 \BOOKMARK [1][-]{section.5}{Lists}{}% 5
-\BOOKMARK [2][-]{subsection.5.1}{What we should be able to do with lists:}{section.5}% 6
-\BOOKMARK [2][-]{subsection.5.2}{Activities}{section.5}% 7
-\BOOKMARK [1][-]{section.6}{Validating User Input}{}% 8
-\BOOKMARK [1][-]{section.7}{Looping through lists}{}% 9
+\BOOKMARK [2][-]{subsection.5.1}{Issues with lists}{section.5}% 6
+\BOOKMARK [2][-]{subsection.5.2}{What we should be able to do with lists:}{section.5}% 7
+\BOOKMARK [2][-]{subsection.5.3}{Activities}{section.5}% 8
+\BOOKMARK [1][-]{section.6}{Validating User Input}{}% 9
+\BOOKMARK [1][-]{section.7}{Looping through lists}{}% 10
+\BOOKMARK [1][-]{section.8}{Lists with more than one dimension}{}% 11

@@ -1,5 +1,4 @@
 import random
-names = ["Alice","Belinda", "Chansing", "Debbie", "Eloise", "Floss"]
 
 def print_list(L):
     my_string = ""
@@ -61,8 +60,6 @@ def find_in_list(L):
     else:
         my_string = "{} is not in the list".format(value)
     print(my_string)
-
-
 
 
 def main():

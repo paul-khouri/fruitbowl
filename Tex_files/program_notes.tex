@@ -74,27 +74,44 @@
 \end{figure}
 
 \newpage
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=15cm]{little_start_project.pdf}
+	\caption*{Little start project}
+\end{figure}
 \section{String Formatting}
 Manging strings for print output is critical:\\
 
 Please review using:\\
 \url{https://www.w3schools.com/python/python_string_formatting.asp}\\
 This means that you actively make variations on the examples given on the page.
+\newpage
 \section{Loops} 
+
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=15cm]{loops.pdf}
+	\includegraphics[width=16cm]{loops.pdf}
 \end{figure}
+
+\lstinputlisting[language=Python, caption = Test program - functions and menu]{loops.py}
+
 \newpage
 \section{Lists}
 Lists are a collection of data items
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=15cm]{lists.pdf}
+	\includegraphics[width=17cm]{lists.pdf}
 \end{figure}
 
-\hyperlink{Lists}{This links to a number of code examples}
+
+
+
+\lstinputlisting[language=Python, caption = Lists]{lists_functions.py}
+\subsection{Issues with lists}
+\begin{itemize}
+	\item The standard error with lists is:  \textbf{IndexError: list index out of range}
+\end{itemize}
 \subsection{What we should be able to do with lists:}
 \begin{itemize}
 	\item Create one and access items in the list using index notation.
@@ -116,11 +133,20 @@ Lists are a collection of data items
 \item Create a function to get an integer from a user with boundaries that might change
 \end{itemize}
 \section{Looping through lists}
+\section{Lists with more than one dimension}
+Sometimes we wish to store a ``package'' of information.\\
+For example , instead of Alice, Bob, Cathy, we might want Alice , Brown, 31 ; Bob Blond 19; Cathy, Black, 21\\
+So we have person, hair colour and age.\\
+
+\lstinputlisting[language=Python, caption = Lists]{multi_structures.py}
+
+
+\hyperlink{Lists}{This links to a number of code examples}
 \newpage
 	\hypertarget{Lists}{}
 \lstinputlisting[language=Python, caption = Lists]{lists.py}
 \lstinputlisting[caption = Lists]{lists.txt}
-\lstinputlisting[language=Python, caption = Lists]{lists_functions.py}
+
 \lstinputlisting[language=Python, caption = Menu and Functions]{menu_list_sums_product_average.py}
 
 \end{document}
