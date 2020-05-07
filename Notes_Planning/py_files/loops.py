@@ -9,7 +9,7 @@ def while_loop_counter(count):
     print("All done")
 
 
-def while_loop_quit():
+def while_loop_indefinite():
     # set a condition
     run = True
     # check the condition
@@ -51,12 +51,13 @@ def menu():
         amount = int(input("How many would you like: -> "))
         while_loop_counter(amount)
     elif choice is 2:
-        while_loop_quit()
+        while_loop_indefinite()
     elif choice is 3:
         for_in_range_loop()
     elif choice is 4:
         double_loop()
     elif choice is 5:
         print("Thank you")
+
 
 menu()
