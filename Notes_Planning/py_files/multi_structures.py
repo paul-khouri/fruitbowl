@@ -115,7 +115,8 @@ def main():
         ["Alice", "Blond", 12],
         ["Cathy", "Blond", 15],
         ["Dan", "Black", 10],
-        ["Bob", "Brown", 13]
+        ["Bob", "Brown", 13],
+        ["Joe", "Green", 13]
     ]
     run = True
     while run:
