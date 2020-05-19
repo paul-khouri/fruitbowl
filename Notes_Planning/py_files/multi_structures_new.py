@@ -1,6 +1,7 @@
-def get_integer(m):
-    my_integer = int(input(m))
+def get_integer(message):
+    my_integer = int(input(message))
     return my_integer
+
 
 def get_string(m):
     my_string = input(m)
@@ -13,42 +14,43 @@ def loop_on_lists(L):
     for x in L:
         my_string = "{:2}: {:5} , {:5} , {:^5}".format(c, x[0], x[1], x[2])
         print(my_string)
-        c+=1
+        c += 1
     print("-" * 30)
     return None
 
+
 def update_name(L):
     loop_on_lists(L)
-    my_index = int(input("Choose option number for name to update: -> "))
-    new_name = input("Enter new name: -> ")
+    my_index = get_integer("Choose option number for name to update: -> ")
+    new_name = get_string("Enter new name: -> ")
     old_name = L[my_index][0]
-    L[my_index][0]= new_name
-    my_string = "The name for {} has been updated to {}".format(old_name,L[my_index][0])
+    L[my_index][0] = new_name
+    my_string = "The name for {} has been updated to {}".format(old_name, new_name)
     print(my_string)
     return None
 
 
 def update_hair(L):
     loop_on_lists(L)
-    my_index = int(input("Choose option number for hair to update: -> "))
-    new_colour = input("Enter new hair colour: -> ")
-    L[my_index][1]= new_colour
-    my_string = "The hair colour for {} has been updated to {}".format(L[my_index][0],L[my_index][1])
+    my_index = get_integer("Choose option number for hair to update: -> ")
+    new_colour = get_string("Enter new hair colour: -> ")
+    L[my_index][1] = new_colour
+    my_string = "The hair colour for {} has been updated to {}".format(L[my_index][0], L[my_index][1])
     print(my_string)
     return None
 
 
 def update_age(L):
     loop_on_lists(L)
-    my_index = int(input("Choose option number for age to update: -> "))
-    new_age = int(input("Enter new age: -> "))
-    L[my_index][2]= new_age
-    my_string = "The age for {} has been updated to {}".format(L[my_index][0],L[my_index][2])
+    my_index = get_integer("Choose option number for age to update: -> ")
+    new_age = get_integer("Enter new age: -> ")
+    L[my_index][2] = new_age
+    my_string = "The age for {} has been updated to {}".format(L[my_index][0], L[my_index][2])
     print(my_string)
     return None
 
 
-def update(L):
+def update(main_list):
     update_menu = [
         ("N", "Name"),
         ("H", "Hair"),
@@ -56,14 +58,14 @@ def update(L):
         ("B", "Back")
     ]
     for x in update_menu:
-        print( "{} : {}".format(x[0],x[1]))
-    choice = input("Please enter your option letter: -> ")
+        print("{} : {}".format(x[0], x[1]))
+    choice = get_string("Please enter your option letter: -> ")
     if choice is "N":
-        update_name(L)
+        update_name(main_list)
     elif choice is "H":
-        update_hair(L)
+        update_hair(main_list)
     elif choice is "A":
-        update_age(L)
+        update_age(main_list)
     elif choice is "B":
         print("Returning to main menu")
         return None
@@ -73,10 +75,10 @@ def update(L):
 
 
 def search_lists(L):
-    search_item = input("Please enter your search item: -> ")
+    search_item = get_string("Please enter your search item: -> ")
     try:
-        s= int(search_item)
-    except:
+        s = int(search_item)
+    except ValueError:
         s = search_item
     row = 0
     for y in L:
@@ -88,24 +90,24 @@ def search_lists(L):
 
 
 def create_new_entry(L):
-    name = input("Please enter name: -> ")
-    hair_colour = input("Please enter hair colour: -> ")
-    age = int(input("Please enter age: -> "))
-    L.append( [name, hair_colour , age])
+    name = get_string("Please enter name: -> ")
+    hair_colour = get_string("Please enter hair colour: -> ")
+    age = get_integer("Please enter age: -> ")
+    L.append([name, hair_colour, age])
     return None
 
 
-def sort_on_index(L,H):
+def sort_on_index(L, H):
     for i in range(0, len(H)):
-        print( "{} : {}".format(i, H[i]))
-    sort_index = int(input(" Please choose index to sort on: -> "))
-    L = sorted(L, key = lambda x: x[sort_index])
+        print("{} : {}".format(i, H[i]))
+    sort_index = get_integer(" Please choose index to sort on: -> ")
+    L = sorted(L, key=lambda x: x[sort_index])
     return L
 
 
 def menu():
     group_of_lists_header = ["Name", "Hair", "Age"]
-    group_of_lists =[
+    group_of_lists = [
         ["Alice", "Blond", 12],
         ["Cathy", "Blond", 15],
         ["Dan", "Black", 10],
@@ -125,9 +127,9 @@ def menu():
     run = True
     while run is True:
         for x in my_menu:
-            print( "{} : {}".format(x[0],x[1]))
+            print("{} : {}".format(x[0], x[1]))
         print("-"*30)
-        choice = input("Please enter your option letter: -> ")
+        choice = get_string("Please enter your option letter: -> ")
         if choice is "R":
             loop_on_lists(group_of_lists)
         elif choice is "U":
@@ -148,9 +150,3 @@ def menu():
 
 if __name__ == "__main__":
     menu()
-
-
-
-
-
-
