@@ -97,13 +97,13 @@ def menu():
     K: Shuffle list
     Q: Quit
     '''
-    print(id(my_list_one))
-    print(id(my_list_two))
-    print(id(my_list))
+    #print(id(my_list_one))
+    #print(id(my_list_two))
+    #print(id(my_list))
 
 
 
-    run = False
+    run = True
     while run == True:
         print(my_menu)
         choice = get_string("Please select you option: -> ").upper()
