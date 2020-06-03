@@ -6,9 +6,14 @@ def review_fruit():
     return None
 
 
-def main():
+def menu():
+
+
+
+
+    
     print("Main function")
 
 
 if __name__ == "__main__":
-    main()
+    menu()
