@@ -1,3 +1,6 @@
+
+
+
 from operator import itemgetter
 L=[[0, 20, 'f'], [4, 2, 't'], [9, 4, 'afsd']]
 L=sorted(L, key = lambda x: x[1])
