@@ -1,3 +1,4 @@
+"""Regular expressions checker"""
 import re
 
 
