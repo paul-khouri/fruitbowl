@@ -8,7 +8,7 @@ fruit_bowl=[
 def get_integer(m, min,max):
     """ message, minimum and maximum returns acceptable integer """
     cont = "y"
-    while cont is "y":
+    while cont == "y":
         try:
             my_integer = int(input(m))
         except ValueError:
@@ -24,7 +24,7 @@ def get_integer(m, min,max):
 
 def get_string(m, max):
     cont = "y"
-    while cont is "y":
+    while cont == "y":
         response_string = input(m)
         if len(response_string) <4:
             print("No proper fruit name has been entered")
@@ -65,7 +65,7 @@ def get_option(F):
         my_options ="{:3}{:10}".format(options_list[i][0], options_list[i][1])
         print(my_options)
     print("-" * 60)
-    option = input("Please choose your option")
+    option = input("Please choose your option: -> ")
     if option == "A":
         add_fruit(F)
         return
@@ -120,21 +120,35 @@ def add_up_fruit(F):
 
 def new_fruit(F):
     cont = "y"
-    while cont is "y":
-        fruit_name = get_string("Please enter the name of your fruit:", 20)
-        fruit_amount = get_integer("Please enter how much fruit you have:",0,10)
-        print( "You have entered {} with {} pieces".format(fruit_name, fruit_amount) )
-        confirm = input("press (y) to confirm, (n) to re-enter again or (e) to exit without changes")
-        if confirm == "y":
-            F.append([fruit_name, fruit_amount])
-            return
-        elif confirm == "n":
-            continue
-        elif confirm == "e":
-            return
+    while cont == "y":
+        fruit_name = get_string("Please enter the name of your fruit: -> ", 20).lower()
+        result = test_fruit_present(F, fruit_name)
+        if result == False:
+            fruit_amount = get_integer("Please enter how much fruit you have: -> ",0,10)
+            print( "You have entered {} with {} pieces".format(fruit_name, fruit_amount) )
+            confirm = input("press (y) to confirm, (n) to re-enter again or (e) to exit without changes: -> ")
+            if confirm == "y":
+                F.append([fruit_name, fruit_amount])
+                return
+            elif confirm == "n":
+                continue
+            elif confirm == "e":
+                return
+            else:
+                print("not a valid entry")
+                continue
         else:
-            print("not a valid entry")
-            continue
+            return None
+
+
+def test_fruit_present(F, new_fruit):
+    for i in range(0, len(F)):
+        if new_fruit == F[i][0]:
+            fruit_amount = get_integer("Please enter how much fruit you have: -> ",0,10)
+            print("You have entered {} with {} pieces".format(F[i][0], fruit_amount))
+            F[i][1] += fruit_amount
+            return True
+    return False
 
 
 
@@ -144,7 +158,7 @@ cont = "y"
 current_fruit_bowl(fruit_bowl)
 while cont=="y":
     response = get_option(fruit_bowl)
-    if response is "Q":
+    if response == "Q":
         cont = "n"
 
 

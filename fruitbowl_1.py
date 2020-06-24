@@ -15,6 +15,10 @@ def similar(a, b):
     return SequenceMatcher(None, a.lower(), b.lower()).ratio()
 
 
+def make_dotted_line():
+    print("-"*20)
+
+
 def get_integer(m, min_, max_):
     """Return validated bounded integer.
 
@@ -43,7 +47,7 @@ def get_string(message, max_):
     """Return string validated by length.
 
     :param message: str
-    :param max: int
+    :param max_: int
     :return: str
     """
     cont = "y"
@@ -62,7 +66,7 @@ def get_string(message, max_):
 def print_fuits_with_options(f):
     """Print list with index numbers.
 
-    :param F: list
+    :param f: list
     :return: None
     """
     for i in range(0, len(f)):
@@ -70,79 +74,66 @@ def print_fuits_with_options(f):
         print(my_string)
 
 
+def current_fruit_bowl(f):
+    """Print list of fruit.
 
-def current_fruit_bowl(F):
+    :param f: list
+    :return: None
+    """
     print("{:20}{:^20}".format("Fruit","Pieces of:"))
-    for i in F:
-        my_fruit = "{:20}{:^20}".format(i[0],i[1])
+    for i in f:
+        my_fruit = "{:20}{:^20}".format(i[0], i[1])
         print(my_fruit)
 
 
-
-
-
-def add_fruit(F):
-    """
-    Arguments
-    ___________
-    F: list  n x 2 [[str, int],...]
-    __________
-    prints list of fruit with indexes,
-    requests user input for index and quantity,
-    adds quantity to the total,
-    prints confirmation,
-    returns none
+def add_fruit(f):
+    """Add extra fruit to pre-existing fruit.
+    
+    :param f: 
+    :return: 
     """
     print("-" * 60)
     # print formatted list with indices
-    for i in range(0, len(F)):
-        my_string = "{:<5}{:10}".format(i, F[i][0])
+    for i in range(0, len(f)):
+        my_string = "{:<5}{:10}".format(i, f[i][0])
         print(my_string)
     print("-" * 60)
     # request index number and quantity to add
-    option = get_integer("Choose option number of fruit to add: -->  ", 0, len(F))
-    my_amount = get_integer("How many {} would you like to add? -->  ".format(F[option][0]), 0, 10)
+    option = get_integer("Choose option number of fruit to add: -->  ", 0, len(f))
+    my_amount = get_integer("How many {} would you like to add? -->  ".format(f[option][0]), 0, 10)
     # add to existing amount
-    F[option][1]=F[option][1]+my_amount
-    response_string = "You now have {} {} in the fruitbowl".format(F[option][1], F[option][0])
+    f[option][1] = f[option][1]+my_amount
+    response_string = "You now have {} {} in the fruitbowl".format(f[option][1], f[option][0])
     print(response_string)
 
 
+def eat_fruit(f):
+    """Remove count of fruit from chosen sublist.
 
-def eat_fruit(F):
-    """
-    Arguments
-    ___________
-    F: list  n x 2 [ [str, int],.. ]
-    __________
-    prints list of fruit with indexes
-    requests user input for index and quantity
-    subtracts quantity from the total
-    prints confirmation
-    returns none
+    :param f: list
+    :return: None
     """
     print("-" * 60)
     # print formatted list with indices
-    for i in range(0, len(F)):
-        my_string = "{:<5}{:10}".format(i, F[i][0])
+    for i in range(0, len(f)):
+        my_string = "{:<5}{:10}".format(i, f[i][0])
         print(my_string)
     print("-" * 60)
     # request index number and quantity to add
-    option = get_integer("Choose option number of fruit to eat -- > ", 0, len(F))
+    option = get_integer("Choose option number of fruit to eat -- > ", 0, len(f))
     # validate subtraction amount to ensure we cannot end up with negative fruit
-    my_amount = get_integer("How many {} would you like to eat -- > ?".format(F[option][0]), 0, F[option][1])
+    my_amount = get_integer("How many {} would you like to eat -- > ?".format(f[option][0]), 0, f[option][1])
     # subtract from existing amount
-    F[option][1]=F[option][1]-my_amount
-    response_string = "You now have {} {} in the fruitbowl".format(F[option][1], F[option][0])
+    f[option][1]=f[option][1]-my_amount
+    response_string = "You now have {} {} in the fruitbowl".format(f[option][1], f[option][0])
     print(response_string)
 
 
 def add_up_fruit(F):
-    """
-    Arguments
-    ___________
-    F: list  n x 2 [ [str, int],..]
-    __________
+    """Print the total sum of fruit pieces.
+    
+    :param F: list
+    :return: None
     """
     total_fruit = 0
     for i in range(0, len(F)):
@@ -184,7 +175,7 @@ def add_fruit_name_quantity(L,n,q):
     for i in range(0,len(L)):
         if n == L[i][0]:
             L[i][1]+=q
-            update == True
+            update = True
     if update == False:
         print("Error on add fruit name quantity")
         return False
