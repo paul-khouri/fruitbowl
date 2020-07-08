@@ -1,8 +1,8 @@
 fruit_bowl=[
-    ["apples", 0],
-    ["pears",0],
-    ["quinces", 0],
-    ["lemons", 0]
+    ["apples", 6],
+    ["pears",10],
+    ["quinces", 5],
+    ["lemons", 1]
 ]
 
 def get_integer(m, min,max):
@@ -120,9 +120,12 @@ def add_up_fruit(F):
 
 def new_fruit(F):
     cont = "y"
+    # loop in case user wishes to re enter fruit after confirmation message
     while cont == "y":
         fruit_name = get_string("Please enter the name of your fruit: -> ", 20).lower()
+        # jump to test if fruit is already present
         result = test_fruit_present(F, fruit_name)
+        #
         if result == False:
             fruit_amount = get_integer("Please enter how much fruit you have: -> ",0,10)
             print( "You have entered {} with {} pieces".format(fruit_name, fruit_amount) )
@@ -145,6 +148,7 @@ def test_fruit_present(F, new_fruit):
     for i in range(0, len(F)):
         if new_fruit == F[i][0]:
             fruit_amount = get_integer("Please enter how much fruit you have: -> ",0,10)
+            print("This has been added to a fruit already in the list")
             print("You have entered {} with {} pieces".format(F[i][0], fruit_amount))
             F[i][1] += fruit_amount
             return True

@@ -134,6 +134,8 @@ def add_up_fruit(F):
     
     :param F: list
     :return: None
+
+    requires row and column list
     """
     total_fruit = 0
     for i in range(0, len(F)):
