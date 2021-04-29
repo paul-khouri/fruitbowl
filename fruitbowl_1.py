@@ -80,9 +80,9 @@ def current_fruit_bowl(f):
     :param f: list
     :return: None
     """
-    print("{:20}{:^20}".format("Fruit","Pieces of:"))
+    print("{:20}{:<20}".format("Fruit","Pieces of:"))
     for i in f:
-        my_fruit = "{:20}{:^20}".format(i[0], i[1])
+        my_fruit = "{:20}{:<20}".format(i[0], i[1])
         print(my_fruit)
 
 
