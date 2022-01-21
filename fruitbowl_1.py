@@ -1,4 +1,4 @@
-"""Fruitbowl management program."""
+"""This file allows the user to add fruit names and quantities to a list."""
 from difflib import SequenceMatcher
 
 
@@ -16,16 +16,20 @@ def similar(a, b):
 
 
 def make_dotted_line():
+    """Print dotted line.
+
+    :return: None
+    """
     print("-"*20)
 
 
 def get_integer(m, min_, max_):
-    """Return validated bounded integer.
+    """Get valid integer from user.
 
-    :param m: str
-    :param min_: int
-    :param max_: int
-    :return: int
+    :param m: string
+    :param min_: integer
+    :param max_: integer
+    :return: integer
     """
     cont = "y"
     while cont == "y":
@@ -80,17 +84,17 @@ def current_fruit_bowl(f):
     :param f: list
     :return: None
     """
-    print("{:20}{:<20}".format("Fruit","Pieces of:"))
+    print("{:20}{:<20}".format("Fruit", "Pieces of:"))
     for i in f:
         my_fruit = "{:20}{:<20}".format(i[0], i[1])
         print(my_fruit)
 
 
 def add_fruit(f):
-    """Add extra fruit to pre-existing fruit.
-    
-    :param f: 
-    :return: 
+    """Add more of a given fruit.
+
+    :param f: list
+    :return: None
     """
     print("-" * 60)
     # print formatted list with indices
@@ -103,7 +107,7 @@ def add_fruit(f):
     my_amount = get_integer("How many {} would you like to add? -->  ".format(f[option][0]), 0, 10)
     # add to existing amount
     f[option][1] = f[option][1]+my_amount
-    response_string = "You now have {} {} in the fruitbowl".format(f[option][1], f[option][0])
+    response_string = "You now have {} {} in the fruit bowl".format(f[option][1], f[option][0])
     print(response_string)
 
 
@@ -124,74 +128,93 @@ def eat_fruit(f):
     # validate subtraction amount to ensure we cannot end up with negative fruit
     my_amount = get_integer("How many {} would you like to eat -- > ?".format(f[option][0]), 0, f[option][1])
     # subtract from existing amount
-    f[option][1]=f[option][1]-my_amount
-    response_string = "You now have {} {} in the fruitbowl".format(f[option][1], f[option][0])
+    f[option][1] = f[option][1]-my_amount
+    response_string = "You now have {} {} in the fruit bowl".format(f[option][1], f[option][0])
     print(response_string)
 
 
-def add_up_fruit(F):
-    """Print the total sum of fruit pieces.
-    
-    :param F: list
-    :return: None
+def add_up_fruit(f):
+    """Add up all the fruit in the fruit bowl list
 
-    requires row and column list
+    :param f: list
+    :return: None
     """
     total_fruit = 0
-    for i in range(0, len(F)):
-        total_fruit += total_fruit + F[i][1]
+    for i in range(0, len(f)):
+        total_fruit += f[i][1]
     print("You have {} pieces of fruit in the fruit bowl".format(total_fruit))
+    return None
 
-def new_fruit(F):
+
+def new_fruit(f):
+    """Add a new fruit name to the list.
+
+    :param f: list
+    :return: None
+    """
     cont = "y"
     while cont == "y":
         change = False
         fruit_name = get_string("Please enter the name of your fruit:", 20)
         # this needs to be checked against pre-existing entries
-        checked_name = check_new_name(fruit_name,F)
+        checked_name = check_new_name(fruit_name, f)
         if checked_name != fruit_name:
             fruit_name = checked_name
             change = True
-        fruit_amount = get_integer("Please enter how much fruit you have:",0,10)
+        fruit_amount = get_integer("Please enter how much fruit you have:", 0, 10)
 
-        print( "You have entered {} with {} pieces".format(fruit_name, fruit_amount) )
+        print("You have entered {} with {} pieces".format(fruit_name, fruit_amount))
         confirm = input("press (y) to confirm, (n) to re-enter again or (e) to exit without changes")
         if confirm == "y":
-            if change == True:
-                add_fruit_name_quantity(F, fruit_name.lower(), fruit_amount)
+            if change is True:
+                add_fruit_name_quantity(f, fruit_name.lower(), fruit_amount)
             else:
-                F.append([fruit_name, fruit_amount])
-            return
+                f.append([fruit_name, fruit_amount])
+            return None
         elif confirm == "n":
             continue
         elif confirm == "e":
-            return
+            return None
         else:
             print("not a valid entry")
             continue
 
 
+def add_fruit_name_quantity(l, n, q):
+    """Add fruit using the name of the fruit entered.
 
-def add_fruit_name_quantity(L,n,q):
+    :param l: list
+    :param n: string
+    :param q: integer
+    :return: boolean
+    """
     update = False
-    for i in range(0,len(L)):
-        if n == L[i][0]:
-            L[i][1]+=q
+    for i in range(0, len(l)):
+        if n == l[i][0]:
+            l[i][1] += q
             update = True
-    if update == False:
+    if update is False:
         print("Error on add fruit name quantity")
         return False
     return True
 
 
-# check if fruit is already in the list
-def check_new_name(n, L):
-    for x in L:
-        r=similar(x[0], n)
+def check_new_name(n, l):
+    """Check whether a newly entered name is already present in the list.
+
+    :param n: string
+    :param l: list
+    :return: string
+    """
+    for x in l:
+        r = similar(x[0], n)
         if r > 0.6:
-            output = "Your entry of {} closely matches a prexisting entry of {}".format(n, x[0])
+            output = "Your entry of {} closely matches " \
+                     "a pre-existing entry of {}".format(n, x[0])
             print(output)
-            choice = get_string("Enter y to use your entry or n to use the prexisting fruit (y/n): -> ",10)
+            choice = get_string("Enter y to use your "
+                                "entry or n to use the "
+                                "pre-existing fruit (y/n): -> ", 10)
             if choice == "y":
                 return n
             elif choice == "n":
@@ -201,7 +224,13 @@ def check_new_name(n, L):
     return n
 
 
-def get_option(F):
+def get_option(f):
+    """Print list of options for the user
+    then call appropriate functions.
+
+    :param f: list
+    :return: None
+    """
     print("-"*60)
     print("Choose your option")
     options_list = [
@@ -213,31 +242,36 @@ def get_option(F):
         ["Q", "Quit"]
     ]
     for i in range(0, len(options_list)):
-        my_options ="{:3}{:10}".format(options_list[i][0], options_list[i][1])
+        my_options = "{:3}{:10}".format(options_list[i][0], options_list[i][1])
         print(my_options)
     print("-" * 60)
     option = input("Please choose your option: -> ")
     if option == "A":
-        add_fruit(F)
+        add_fruit(f)
         return
     elif option == "E":
-        eat_fruit(F)
+        eat_fruit(f)
         return
     elif option == "R":
-        current_fruit_bowl(F)
+        current_fruit_bowl(f)
         return
     elif option == "T":
-        add_up_fruit(F)
+        add_up_fruit(f)
         return
     elif option == "N":
-        new_fruit(F)
+        new_fruit(f)
         return
     elif option == "Q":
         return option
     else:
         print("Not an option")
 
+
 def main():
+    """Start program.
+
+    :return: None
+    """
     fruit_bowl = [
         ["apples", 0],
         ["pears", 0],
@@ -246,7 +280,7 @@ def main():
     ]
     cont = "y"
     current_fruit_bowl(fruit_bowl)
-    while cont=="y":
+    while cont == "y":
         response = get_option(fruit_bowl)
         if response == "Q":
             cont = "n"
@@ -254,5 +288,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 

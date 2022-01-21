@@ -47,4 +47,40 @@ def sum_row_column_list(l,i):
 
 
 
-test_prices_tuple()
+#test_prices_tuple()
+
+def recursive_test():
+    print("hello")
+    choice = input("press enter to go again")
+    if choice == "":
+        return recursive_test()
+    else:
+        return None
+
+def loop_test():
+    print("loop starts")
+    go = True
+    while go is True:
+        print("hello")
+        choice = input("press enter to go again")
+        if choice != "":
+            return None
+
+import sys
+import trace
+
+# create a Trace object, telling it what to ignore, and whether to
+# do tracing or line-counting or both.
+tracer = trace.Trace(
+    ignoredirs=[sys.prefix, sys.exec_prefix],
+    trace=0,
+    count=1)
+
+# run the new command using the given tracer
+tracer.run('loop_test()')
+
+# make a report, placing output in the current directory
+r = tracer.results()
+r.write_results(show_missing=True, coverdir=".")
+#recursive_test()
+#loop_test()
